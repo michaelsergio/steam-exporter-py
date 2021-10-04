@@ -18,16 +18,18 @@ steam_game_playtime_forever_seconds{app_id="3590",name="Plants vs. Zombies: Game
 
 # Setup
 
-## Mandatory
+## Environment Variables:
 
-To get your Steam User ID. Login and go to "view profile".
-It should be in the URL:
-`https://steamcommunity.com/profiles/xxxxxx`
+### STEAM_KEY
 
 To get a steam key, sign up for one here:
 https://steamcommunity.com/dev
 
-## Other environment variables:
+### STEAM_USER
+
+To get your Steam User ID. Login and go to "view profile".
+It should be in the URL bar where xxxxxx is:
+`https://steamcommunity.com/profiles/xxxxxx`
 
 ### STEAM_SLEEP
 
@@ -40,5 +42,10 @@ Port to launch server on.
 Defaults to 8000
 
 # Run
-docker run -e STEAM_KEY=$YOURSTEAMKEYHERE -e STEAM_USER=$YOURSTEAMUSERID  -p8000:8000  -it steam 
+
+Build:
+`docker build -t 'steam-exporter' .`
+
+Run with Docker:
+`docker run -e STEAM_KEY=$YOURSTEAMKEYHERE -e STEAM_USER=$YOURSTEAMUSERID  -p8000:8000  -it steam-exporter`
 
