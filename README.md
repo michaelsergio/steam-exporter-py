@@ -34,7 +34,7 @@ It should be in the URL bar where xxxxxx is:
 ### STEAM_SLEEP
 
 Time in seconds between polling.
-Defauls to 300
+Defaults to 300
 
 ### STEAM_PORT
 
